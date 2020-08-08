@@ -13,7 +13,7 @@ $ciu =(int)$_POST['ciu'];
 
      $conn1=mysqli_connect($hostname,$username,$password,$database);
   
-      $sql="INSERT INTO usuario(idusu,usu,contra,nombre,Papellido, Aapellido,ciudad) VALUES ('null','".$usu."',sha('".$contra."'),'".$nom."','".$Pap."','".$Aap."','".$ciu."')";
+      $sql="Call insertar1('".$usu."',".$contra.",'".$nom."','".$Pap."','".$Aap."','".$ciu."')";
 
       
       

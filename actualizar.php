@@ -25,17 +25,14 @@ $ciu =(int)$_POST['ciu'];
                 
                 $id=$row['idusu'];
 
-       $update = "UPDATE usuario
-		set usu = '$usu', 
-			contra = '$contra' 
-		where idusu = $id";
+       $update = "call sp_actualizar('".$id."','".$usu."','".$contra."')";
 
 
 
       
         if (mysqli_query($conn1,$update)) 
             {
-    	         echo "<br> Enhorabuena, se creo tu cuenta ";
+    	         echo "<br> Enhorabuena, se actulizado ";
                 
                   
             }

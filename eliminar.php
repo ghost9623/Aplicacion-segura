@@ -1,4 +1,4 @@
-<?php
+ <?php
 $hostname='localhost';
 $database='registro';
 $username='Erick';
@@ -9,7 +9,7 @@ $nom=$_POST['nom'];
 
      $conn1=mysqli_connect($hostname,$username,$password,$database);
   
-      $sql="DELETE FROM usuario WHERE nombre  = '$nom'";
+      $sql="call sp_eliminar('$nom')";
 
       
       
@@ -18,7 +18,7 @@ $nom=$_POST['nom'];
       
         if (mysqli_query($conn1,$sql)) 
             {
-    	         echo "<br> Enhorabuena, se creo tu cuenta ";
+    	         echo "<br> Enhorabuena,se ha eliminado ";
                 
                   
             }

@@ -12,7 +12,7 @@ $usu=$_GET['usu'];
       
 
       
-      $sql1="SELECT usu,nombre,Papellido,Aapellido FROM usuario WHERE usu='$usu'";
+      $sql1="CALL selec('$usu')";
       $res=$conn1 -> query($sql1);
 
       while ($filas=$res -> fetch_array()) {
